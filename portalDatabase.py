@@ -54,7 +54,7 @@ class Database():
         ''' Method to view all appointments '''
         if self.connection.is_connected():
             self.cursor = self.connection.cursor()
-            query = "SELECT * FROM appointments"
+            query = "SELECT * FROM doctors_appointments_patients_view"
             self.cursor.execute(query)
             records = self.cursor.fetchall()
             return records
